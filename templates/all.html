@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All tables Document</title>
+</head>
+<body>
+    <h1 align="Left">
+        Display Topic Table
+    </h1>
+    <table border="3px" align="Left" width="200px">
+        <tr>
+            <th>topic_name</th>
+        </tr>
+
+        {% for to in topics %}
+        <tr>
+            <td>{{to.topic_name}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+    
+    
+    <h1 align="Center">
+        Display Webpage Table
+    </h1>
+    <table border="4px" align="center" >
+        
+        <tr>
+            <th>topic_name</th>
+            <th>name</th>
+            <th>url</th>
+        </tr>
+
+        {% for wo in webpages %}
+        <tr>
+            <td>{{wo.topic_name}}</td>
+            <td>{{wo.name}}</td>
+            <td>{{wo.url}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+    <h1 align="Right">
+        Display Accessrecord Table
+    </h1>
+    <table border="5px" align="Right">
+        <tr>
+            <th>name</th>
+            <th>date</th>
+            <th>author</th>
+        </tr>
+
+        {% for ao in access %}
+        <tr>
+            <td>{{ao.name}}</td>
+            <td>{{ao.date}}</td>
+            <td>{{ao.author}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</body>
+</html>
